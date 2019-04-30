@@ -1,0 +1,22 @@
+Exercício 1
+
+- Criar uma tabela FUNC_TREINA:	
+		= crate table FUNC_TREINA as select * from FUNC;
+
+- Crie um bloco anônimo onde realize as seguintes operações:
+
+	1 - Inserir 2 departamentos novos (DE4D1, DE410) com sequencial n+1;
+
+		SELECT MAX(DEPTNO) FROM DEPT;		
+		INSERT 
+
+
+	2 - Liste todos os departamentos da tabela:
+		- for i in (select * from DEPT) loop
+ 		      i.deptno
+		      i.dname
+		  end loop;
+	3 - Altere o registro DE4D1 para DE4D10
+	4 - Liste o departamento DE4D10
+	5 - Exclua o departamento DE4D10
+	6 - Liste todos os departamentos

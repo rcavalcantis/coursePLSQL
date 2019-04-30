@@ -1,0 +1,6 @@
+create or replace
+PACKAGE PK_CONTROL_EMP AS
+
+ PROCEDURE PR_INCLUIR_CTRL(wp_rec_emp in out PK_ESTRUTURA_DADOS.tp_rec_emp);
+
+END PK_CONTROL_EMP;

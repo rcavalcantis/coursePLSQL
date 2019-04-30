@@ -1,0 +1,37 @@
+
+1- COPIE OS ARQUIVOS PARA SUA MÁQUINA:
+
+	jdk-8u45-linux-i586.tar.gz
+	sqldeveloper-4.0.3.16.84-1.noarch.rpm
+
+2- INSTALANDO O JAVA
+
+	sudo mkdir -p /opt/java
+	sudo tar -zxf jdk-8u45*.tar.gz -C /opt/java
+	ls /opt/java
+	sudo ln -sf /opt/java/jdk1.8.0_45
+	ls /opt;java/jdk
+
+3- INSTALANDO O SQL DEVELOPER
+
+	sudo apt-get -y install alien
+	sudo alien -ic sqldeveloper-4.0.3.16.84-1.noarch.rpm
+	ls /opt/sqldeveloper
+	ls -l $(which sqldeveloper)
+	a=$(which sqldeveloper)
+	ls -l /opt/java/jdk
+	sudo sed -i "1 i unset GNOME_DESKTOP_SESSION_ID" $a
+        sudo sed -i "1 i export JAVA_HOME=/opt/java/jdk" $a
+	cat $a
+
+4- INICIANDO A APLICAÇÃO
+
+	ls -l $(which sqldeveloper)
+	echo $PATH
+	sqldeveloper
+
+	---
+	ls -l /opt/java/jdk/bin/java
+	grep JAVA /user/local/bin/sqldeveloper
+
+	grep DESKTOP $(which sqldeveloper)
